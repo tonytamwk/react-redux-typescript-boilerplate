@@ -2,6 +2,8 @@
 
 A bare minimum react-redux-webpack-typescript boilerplate with TodoMVC example.
 
+Add a global main.css for boilerplate. 
+
 Note that this project does not include **Server-Side Rendering**,  **Testing Frameworks** and other stuffs that makes the package unnecessarily complicated.
 
 Ideal for creating React apps from the scratch.

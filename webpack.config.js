@@ -49,6 +49,7 @@ module.exports = {
       // css
       {
         test: /\.css$/,
+        exclude: /main\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -60,6 +61,21 @@ module.exports = {
                 importLoaders: 1,
                 localIdentName: '[local]__[hash:base64:5]'
               }
+            },
+            {
+              loader: 'postcss-loader'
+            }
+          ]
+        })
+      },
+      // main.css
+      {
+        test: /main\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader'
             },
             {
               loader: 'postcss-loader'
